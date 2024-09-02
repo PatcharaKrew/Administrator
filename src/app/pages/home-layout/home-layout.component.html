@@ -1,0 +1,27 @@
+<nz-layout class="layout">
+  <nz-sider nzCollapsible nzWidth="200px">
+    <div class="logo">
+      <img src="\assets\image\admmmm.webp" alt="logo" />
+    </div>
+    <ul nz-menu nzMode="inline" class="menu1">
+      <li nz-menu-item (click)="navigateToCheck()">
+        <span nz-icon nzType="plus-circle"></span>
+        <span>กำหนดเจ้าหน้าที่</span>
+      </li>
+      <li nz-menu-item (click)="navigateToHistory()">
+        <span nz-icon nzType="radar-chart"></span>
+        <span>เจ้าหน้าที่ทั้งหมด</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header class="header">
+
+    </nz-header>
+    <nz-content>
+      <div class="site-layout-background" style="padding: 24px; min-height: 280px;">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

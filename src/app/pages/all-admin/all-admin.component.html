@@ -1,0 +1,27 @@
+<nz-table
+  #rowSelectionTable
+  nzShowSizeChanger
+  [nzData]="listOfData"
+  (nzCurrentPageDataChange)="onCurrentPageDataChange($event)"
+>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of rowSelectionTable.data">
+      <td>{{ data.id }}</td>
+      <td>{{ data.username }}</td>
+      <td>{{ data.password }}</td>
+      <td>
+        <button nz-button nzType="primary" (click)="onDelete(data.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
